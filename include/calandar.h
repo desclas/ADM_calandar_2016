@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:12:17 2017 Mathias
-** Last update Sat Jul  1 13:33:31 2017 Mathias
+** Last update Sat Jul  1 14:26:46 2017 Mathias
 */
 
 #ifndef CALANDAR_H_
@@ -78,7 +78,7 @@ long int *get_emp_meet(t_all *all, long int id);
 int my_cmp_mod(char *st, char *tr);
 int my_cmp_date(char *date, char *cmp);
 void sort_emp_meet(long int *tab, t_all *all);
-void switch_emp(long int *tab, int i);
+void switch_emp(long int *tab, int *i);
 void sorte_id(long int *tab, t_all *all);
 void sorte_zipcode(long int *tab, t_all *all);
 void sorte_post(long int *tab, t_all *all);

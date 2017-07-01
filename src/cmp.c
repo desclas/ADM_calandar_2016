@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:26:20 2017 Mathias
-** Last update Sat Jul  1 13:27:35 2017 Mathias
+** Last update Sat Jul  1 14:25:08 2017 Mathias
 */
 
 #include "calandar.h"
@@ -68,14 +68,14 @@ void sort_emp_meet(long int *tab, t_all *all)
 	}
 }
 
-void switch_emp(long int *tab, int i)
+void switch_emp(long int *tab, int *i)
 {
   long int tmp;
 
-  tmp = tab[i];
-  tab[i] = tab[i + 1];
-  tab[i + 1] = tmp;
-  i = -1;
+  tmp = tab[*i];
+  tab[*i] = tab[*i + 1];
+  tab[*i + 1] = tmp;
+  *i = -1;
 }
 
 void sorte_id(long int *tab, t_all *all)
@@ -85,5 +85,5 @@ void sorte_id(long int *tab, t_all *all)
   i = -1;
   while (tab[++i] != -1 && tab[i + 1] != -1)
     if (all->emp[tab[i]]->id > all->emp[tab[i + 1]]->id)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }

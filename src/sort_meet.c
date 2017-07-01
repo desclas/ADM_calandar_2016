@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:31:06 2017 Mathias
-** Last update Sat Jul  1 13:32:12 2017 Mathias
+** Last update Sat Jul  1 14:25:38 2017 Mathias
 */
 
 #include "calandar.h"
@@ -37,7 +37,7 @@ void sortm_id(long int *tab, t_all *all)
   i = -1;
   while (tab[++i] != -1 && tab[i + 1] != -1)
     if (all->meet[tab[i]]->id > all->meet[tab[i + 1]]->id)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void sortm_zipcode(long int *tab, t_all *all)
@@ -51,10 +51,10 @@ void sortm_zipcode(long int *tab, t_all *all)
 			  all->meet[tab[i + 1]]->place)) == 0)
       {
 	if (all->meet[tab[i]]->id > all->meet[tab[i + 1]]->id)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void sortm_date(long int *tab, t_all *all)
@@ -68,10 +68,10 @@ void sortm_date(long int *tab, t_all *all)
 			  all->meet[tab[i + 1]]->date)) == 0)
       {
 	if (all->meet[tab[i]]->id > all->meet[tab[i + 1]]->id)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void print_meet(t_all *all, long int *meet)

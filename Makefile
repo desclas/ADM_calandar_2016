@@ -5,7 +5,7 @@
 ## Login   <mathias@epitech.net>
 ## 
 ## Started on  Sat Jul  1 13:33:55 2017 Mathias
-## Last update Sat Jul  1 13:44:18 2017 Mathias
+## Last update Sat Jul  1 14:27:21 2017 Mathias
 ##
 
 SRC	=	src/append.c		\

@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:24:41 2017 Mathias
-** Last update Sat Jul  1 13:25:42 2017 Mathias
+** Last update Sat Jul  1 14:11:03 2017 Mathias
 */
 
 #include "calandar.h"
@@ -28,7 +28,7 @@ long int *get_all_emp(t_all * all)
   int i;
 
   tab = malloc(sizeof(long int));
-  tab[0] = 1;
+  tab[0] = -1;
   i = 0;
   while (all->emp[i] != NULL)
     {

@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:20:10 2017 Mathias
-** Last update Sat Jul  1 13:23:49 2017 Mathias
+** Last update Sat Jul  1 14:18:56 2017 Mathias
 */
 
 #include "calandar.h"
@@ -19,7 +19,7 @@ void new_meeting(char **tab, char *str, t_all *all)
   while (tab[++i] != NULL);
   if (i >= 6)
     if (is_num(tab[3]) == 0)
-      if (how_num(tab, 4, all) <= 2)
+      if (how_num(tab, 4, all) >= 2)
 	append_meet(all, tab);
 }
 

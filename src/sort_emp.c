@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:28:00 2017 Mathias
-** Last update Sat Jul  1 13:29:07 2017 Mathias
+** Last update Sat Jul  1 14:26:26 2017 Mathias
 */
 
 #include "calandar.h"
@@ -27,16 +27,16 @@ void sorte_zipcode(long int *tab, t_all *all)
 				 all->emp[tab[i + 1]]->first_name)) == 0)
 	      {
 		if (all->emp[tab[i]]->id > all->emp[tab[i + 1]]->id)
-		  switch_emp(tab, i);
+		  switch_emp(tab, &i);
 	      }
 	    else if (sv == 1)
-	      switch_emp(tab, i);
+	      switch_emp(tab, &i);
 	  }
 	else if (sv == 1)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void sorte_post(long int *tab, t_all *all)
@@ -56,16 +56,16 @@ void sorte_post(long int *tab, t_all *all)
 				 all->emp[tab[i + 1]]->first_name)) == 0)
 	      {
 		if (all->emp[tab[i]]->id > all->emp[tab[i + 1]]->id)
-		  switch_emp(tab, i);
+		  switch_emp(tab, &i);
 	      }
 	    else if (sv == 1)
-	      switch_emp(tab, i);
+	      switch_emp(tab, &i);
 	  }
 	else if (sv == 1)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void sorte_last_name(long int *tab, t_all *all)
@@ -82,13 +82,13 @@ void sorte_last_name(long int *tab, t_all *all)
 			     all->emp[tab[i + 1]]->first_name)) == 0)
 	  {
 	    if (all->emp[tab[i]]->id > all->emp[tab[i + 1]]->id)
-	      switch_emp(tab, i);
+	      switch_emp(tab, &i);
 	  }
 	else if (sv == 1)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 void sorte_first_name(long int *tab, t_all *all)
@@ -105,13 +105,13 @@ void sorte_first_name(long int *tab, t_all *all)
 			     all->emp[tab[i + 1]]->last_name)) == 0)
 	  {
 	    if (all->emp[tab[i]]->id > all->emp[tab[i + 1]]->id)
-	      switch_emp(tab, i);
+	      switch_emp(tab, &i);
 	  }
 	else if (sv == 1)
-	  switch_emp(tab, i);
+	  switch_emp(tab, &i);
       }
     else if (sv == 1)
-      switch_emp(tab, i);
+      switch_emp(tab, &i);
 }
 
 long int *copy_mate(long int *tab, long int no)
