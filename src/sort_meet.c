@@ -5,7 +5,7 @@
 ** Login   <mathias@epitech.net>
 ** 
 ** Started on  Sat Jul  1 13:31:06 2017 Mathias
-** Last update Sat Jul  1 14:25:38 2017 Mathias
+** Last update Sat Jul  1 14:33:30 2017 Mathias
 */
 
 #include "calandar.h"
@@ -82,21 +82,22 @@ void print_meet(t_all *all, long int *meet)
 
   i = 0;
   while (meet[i] != -1)
-    {
-      mate = copy_mate(all->meet[meet[i]]->members, -1);
-      sort_it(mate, all);
-      sorte_first_name(mate, all);
-      count = 0;
-      printf("******************************\n");
-      printf("MEETING\ndate:  %s\nplace:  %s\nwith %s %s",
-	     all->meet[meet[i]]->date, all->meet[meet[i]]->place,
-	     all->emp[mate[count]]->last_name,
-	     all->emp[mate[count]]->first_name);
-      while (mate[++count] != -1)
-	printf(", %s %s", all->emp[mate[count]]->last_name,
+    if (check_meeting(all, meet[i]) == 0)
+      {
+	mate = copy_mate(all->meet[meet[i]]->members, -1);
+	sort_it(mate, all);
+	sorte_first_name(mate, all);
+	count = 0;
+	printf("******************************\n");
+	printf("MEETING\ndate:  %s\nplace:  %s\nwith %s %s",
+	       all->meet[meet[i]]->date, all->meet[meet[i]]->place,
+	       all->emp[mate[count]]->last_name,
 	       all->emp[mate[count]]->first_name);
-      printf("\n");
-      free(mate);
-      i += 1;
-    }
+	while (mate[++count] != -1)
+	  printf(", %s %s", all->emp[mate[count]]->last_name,
+		 all->emp[mate[count]]->first_name);
+	printf("\n");
+	free(mate);
+	i += 1;
+      }
 }
